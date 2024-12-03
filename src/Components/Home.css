@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montserrat {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .montserratmv {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+
+ 
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1.1); }
+    50% { transform: translateY(-20px) scale(1.1); }
+  }
+
+  @keyframes slideFromRight {
+    from { transform: translateX(100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes clipReveal {
+    from { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); opacity: 0; }
+    to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); opacity: 1; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes particle1 {
+    0% { transform: translate(0, 0); opacity: 0; }
+    50% { opacity: 0.2; }
+    100% { transform: translate(100vw, -50vh); opacity: 0; }
+  }
+
+  @keyframes particle2 {
+    0% { transform: translate(50vw, 0); opacity: 0; }
+    50% { opacity: 0.2; }
+    100% { transform: translate(-50vw, -70vh); opacity: 0; }
+  }
+
+  @keyframes particle3 {
+    0% { transform: translate(100vw, 50vh); opacity: 0; }
+    50% { opacity: 0.2; }
+    100% { transform: translate(0, -50vh); opacity: 0; }
+  }
+
+
+  
