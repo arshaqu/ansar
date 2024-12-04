@@ -32,9 +32,9 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="relative w-full h-screen overflow-hidden">
+    <div ref={sectionRef} className="relative w-full xs:h-[72vh] md:h-[100vh] overflow-hidden ">
       {/* Background Image with Gradient Overlay */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 ">
         <img 
           src={backgroundImage}
           alt="Background"
@@ -42,23 +42,23 @@ const HeroSection = () => {
             isVisible ? 'animate-[kenburns_20s_ease-in-out_infinite]' : ''
           }`}
         />
-        <div className="absolute inset-0 bg-gradient-to-r opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r opacity-90 "></div>
       </div>
 
       {/* Content Container */}
-      <div className="relative h-full w-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 md:px-16 py-8 md:py-0">
+      <div className="relative h-full w-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 md:px-16 py-8 md:py-0 ">
         {/* Left Content */}
-        <div className="flex-1 mt-8 md:mt-0 z-10">
-          <div className="flex items-start">
+        <div className="flex-1 mt-8 md:mt-0 z-10 ">
+          <div className="flex items-start ">
             {/* Animated Green Line with glow effect */}
             <div 
-              className={`w-3 bg-green-500 ml-2 shadow-[0_0_15px_rgba(34,197,94,0.2)] transition-all duration-1000 ease-out ${
+              className={`w-3 bg-green-500 ml-2 shadow-[0_0_15px_rgba(34,197,94,0.2)] transition-all duration-1000 ease-out  ${
                 isVisible ? 'h-32 md:h-64' : 'h-0'
               }`}
             />
 
             {/* Text Content */}
-            <div className="space-y-2 ml-6 md:ml-20">
+            <div className="space-y-2 ml-6 md:ml-20 ">
               <h2 
                 className={`text-white text-2xl sm:text-3xl md:text-5xl font-bold whitespace-nowrap 
                   ${isVisible ? 'animate-[slideFromRight_0.8s_ease-out_forwards]' : 'opacity-0'}`}
@@ -81,15 +81,20 @@ const HeroSection = () => {
 
         {/* Person Image with floating animation */}
         <div 
-          className={`w-full md:w-1/3 mt-8 md:mt-0 flex justify-center md:block
-            ${isVisible ? 'animate-[fadeIn_1.2s_ease-out_0.8s_forwards]' : 'opacity-0'}`}
-        >
-          <img 
-            src={personImage}
-            alt="Ansar Muhammed"
-            className="w-3/4 md:w-full h-auto object-contain md:scale-110 md:-ml-24 md:mt-24"
-          />
-        </div>
+  className={`w-full md:w-1/3 h-[400px] md:h-full flex flex-col justify-end items-center xs:mt-[100px]
+    ${isVisible ? 'animate-[fadeIn_1.2s_ease-out_0.8s_forwards]' : 'opacity-0'}`}
+>
+  <img 
+  
+    src={personImage}
+    alt="Ansar Muhammed"
+    className="w-3/4 md:w-full h-auto object-contain  md:scale-110 md:-ml-24 xs:mt-[10px]"
+  />
+</div>
+
+
+
+
       </div>
 
       {/* Animated particles in the background */}
